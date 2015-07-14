@@ -4,26 +4,54 @@ block content
 		.home-slider
 			.flexslider
 				ul.slides
-					li
+					li(style="background-image: url('assets/img/slide1.jpg'); background-size: cover;")
 						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
-					li
+					li(style="background-image: url('assets/img/slide2.jpg'); background-size: cover;")
 						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
-					li
-						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
-					li
-						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
-					li
-						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')		
+					li(style="background-image: url('assets/img/slide3.jpg'); background-size: cover;")
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')							
 		.home-boxes
 			.wide
-				+contentBox('banner', '335x427')
+				.school(style="background-image: url('assets/img/scoala.jpg'); background-size: cover;")
+					h3.title Pentru <strong> Scoala </strong>
+					.inner-content
+						ul
+							li 
+								a(href='#') Ghiozdane
+							li 
+								a(href='#') Penare
+							li 
+								a(href='#') Creioane colorate
+							li 
+								a(href='#') Set desen
+							li 
+								a(href='#') Acuarele				
 			.wide
-				+contentBox('banner', '335x427')
-			.wide
-				+contentBox('banner', '335x427')
+				.office(style="background-image: url('assets/img/birou.jpg'); background-size: cover;")
+					h3.title Pentru <strong> biroul </strong> tau
+					.inner-content
+						ul
+							li 
+								a(href='#') Dosare
+							li 
+								a(href='#') Suport A4
+							li 
+								a(href='#') Pixuri
+							li 
+								a(href='#') Stilouri						
+				//- +contentBox('banner', '335x427')
+			//- .wide
+			//- 	.catalog
+				//- +contentBox('banner', '335x427')
 		.featured-list
+			h2.list-header Rechizite scolare
 			.product-list
-				+product-list(3)				
-		.newin-list
+				+product-list(6)
+		//- .newin-list
+		//- 	h2.list-header Produse noi
+		//- 	.product-list
+		//- 		+product-list(4)
+		.featured-list
+			h2.list-header Rechizite scolare
 			.product-list
 				+product-list(6)

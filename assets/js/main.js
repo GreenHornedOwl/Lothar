@@ -1,3 +1,8 @@
+function homeBoxes() {
+	var height = $(".home-slider").height()
+	$('.wide').height(height);
+}
+
 $(document).ready(function() {
 
 	  $('.flexslider').flexslider({
@@ -123,5 +128,19 @@ $(document).ready(function() {
 		e.preventDefault
 		alert("Galben sau Palarie ?")
 	})
+	$(".home-slider img").on("load", function(){
+			 $(".home-slider").css("opacity","1");		
+		});	
+	$(window).on("load", function(){
+		if ($(".home-slider").height() > 100) {
+			homeBoxes();
+			$(".wide").css("opacity","1");
+			$(".featured-list").css("opacity","1");
+		}
+	});
 
 });
+
+// $(window).resize(function() {
+// 	homeBoxes();
+// });
