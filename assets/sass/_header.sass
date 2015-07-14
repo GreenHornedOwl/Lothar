@@ -1,0 +1,32 @@
+.header
+	+clearfix
+	// margin-bottom: 1em
+	position: relative
+	border-bottom: 2px solid #FAD2D2
+	font-size: 0.9em
+	.logo	
+		padding-left: 0
+		position: absolute
+		left: $spacing*2
+		z-index: 99
+	.cos
+		float: right
+		margin-left: 1em
+		line-height: 2em
+		span
+			color: $accent
+	.search
+		float: right
+		form 
+			+default-input
+		input
+			+default-input			
+			border-top: none
+			border-left: none
+			border-right: none
+		button
+			outline: none
+			background-color: #fff
+			border: none
+			color: $accent
+			font-size: 1.2em

@@ -1,0 +1,29 @@
+extend jade.resources/layout/master
+block content
+	.container.content
+		.home-slider
+			.flexslider
+				ul.slides
+					li
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
+					li
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
+					li
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
+					li
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')
+					li
+						img(src='http://placehold.it/1024x427/FFFFFF/000001' class='img-responsive')		
+		.home-boxes
+			.wide
+				+contentBox('banner', '335x427')
+			.wide
+				+contentBox('banner', '335x427')
+			.wide
+				+contentBox('banner', '335x427')
+		.featured-list
+			.product-list
+				+product-list(3)				
+		.newin-list
+			.product-list
+				+product-list(6)

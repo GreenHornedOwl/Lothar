@@ -1,0 +1,82 @@
+.main-nav	
+	position: relative
+	z-index: 2	
+	font-family: "Roboto Condensed"
+	padding-left: 5.5em
+	line-height: 3em
+	float: left
+	display: inline-block
+	margin-bottom: -1px
+	ul
+		+h-nav
+		position: relative
+	a		
+		font-weight: 400	
+		color: #000
+		padding: 0.2em 0.5em
+		// &.active 
+		// 	color: #000
+		border-bottom: 2px solid #f6f6f6
+		// &:hover
+		// 	border-color: $primary		
+		&.active
+			// border-color: #74D318	
+			// background-color: #74D318	
+			// color: #fff
+	li 
+		&:first-child a 
+			border-color: #74D318	
+		&:nth-child(2) a	
+			border-color: #30B0E5
+		&:nth-child(3) a	
+			border-color: #E53092	
+		&:nth-child(4) a	
+			border-color: #E2E50F
+		&:nth-child(5) a	
+			border-color: #30E5CE	
+		&:nth-child(6) a	
+			border-color: #308EE5		
+		&:nth-child(7) a	
+			border-color: #79C614	
+		&:nth-child(8) a	
+			border-color: #F17D0B		
+	.dropdown		
+		a:after
+			font-family: "FontAwesome"
+			content: "\f107"
+			font-size: 0.8em
+			margin-left: 0.5em	
+	.dropdown:hover
+		.dropdown-menu
+			display: inline-block		
+	.dropdown-menu
+		display: none
+		+v-nav
+		+clearfix		
+		border-bottom: 2px solid $accent
+		min-height: 300px
+		position: absolute
+		top: 28px
+		left: 0
+		.level-2			
+			a
+				+nav-level-2(transparent, $accent, transparent, $accent)
+				text-transform: uppercase
+				font-weight: 700
+				font-size: 0.9em
+				padding-left: 0.8em
+				&:after
+					display: none
+		.level-3
+			a
+				+nav-level-2(transparent, #000, transparent, $accent)
+				font-size: 0.8em
+				text-transform: none
+				font-weight: 400			
+				padding-left: 1em
+		.level-2-container
+			padding: 1em $grid-gutter-width/2
+			float: left		
+	.teaser
+		float: left
+								
