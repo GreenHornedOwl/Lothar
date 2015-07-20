@@ -11,6 +11,8 @@
 	background-color: #fff
 	z-index: 99
 	font-family: 'Roboto Condensed', sans-serif
+	@media (max-width: 1350px)
+		font-size: 0.8em
 	.logo	
 		padding-left: 0
 		position: absolute
@@ -18,11 +20,12 @@
 		left: $spacing*2
 		z-index: 99
 		font-size: 1.1em
+		max-width: 40px
 		img 	
 			width: 100%
 	.cos
 		float: right
-		margin-left: 1em
+		margin-left: 0.5em
 		line-height: 2em
 		padding-top: 0.5em
 		a 
@@ -51,8 +54,12 @@
 				font-weight: 700
 		span
 			color: #79C614
+		.hidden-fix
+			@media (max-width: 1300px)
+				display: none	
 	.search
 		float: right
+		padding-top: 0.7em
 		form 
 			+default-input
 		input
@@ -60,9 +67,21 @@
 			border-top: none
 			border-left: none
 			border-right: none
+			&.form-control
+				font-size: 1.2em
+				line-height: 1.4
+				border-radius: 0
+				border: none
+				font-weight: 300
+				line-height: 1
+				padding-top: 12px
+				padding: 0.5em
+				margin-top: 0.5em
 		button
 			outline: none
 			background-color: #fff
 			border: none
-			color: $accent
+			color: $primary
 			font-size: 1.2em
+		.hidden-fix			
+			display: none		

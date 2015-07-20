@@ -38,20 +38,66 @@ block content
 							li 
 								a(href='#') Pixuri
 							li 
-								a(href='#') Stilouri						
-				//- +contentBox('banner', '335x427')
+								a(href='#') Stilouri		
+			.wide				
+				.catalog(style="background-image: url('assets/img/catalog.jpg'); background-size: cover;")
+					h3.title Descarca <strong> Catalogul </strong> 
+						i(class='fa fa-download')
+				//- +contentBox('banner', '337x427')
 			//- .wide
 			//- 	.catalog
-				//- +contentBox('banner', '335x427')
+				//- +contentBox('banner', '337x427')
 		.featured-list
 			h2.list-header Rechizite scolare
 			.product-list
-				+product-list(6)
+				.flexslider
+					ul.slides					
+						+product-list-carousel(8)
+		.product-banners
+			img(src='assets/img/banner-full.jpg' class='img-responsive' style='max-width: 100%; margin-bottom: 0.5em;')
+		.featured-list
+			h2.list-header Produse recomandate
+			.product-list
+				.flexslider
+					ul.slides					
+						+product-list-carousel(8)
+		.logos-list
+			h2.list-header Brands
+			.flexslider
+				ul.slides
+					li 
+						img(src='assets/img/logos/Picture3.png')
+					li 
+						img(src='assets/img/logos/Picture4.png')		
+					li 
+						img(src='assets/img/logos/Picture7.png')
+					li 
+						img(src='assets/img/logos/Picture6.png')
+					li 
+						img(src='assets/img/logos/Picture7.png')
+					li 
+						img(src='assets/img/logos/Picture3.png')
+					li 
+						img(src='assets/img/logos/Picture9.png')		
+					li 
+						img(src='assets/img/logos/Picture3.png')
+					li 
+						img(src='assets/img/logos/Picture4.png')		
+					li 
+						img(src='assets/img/logos/Picture7.png')
+					li 
+						img(src='assets/img/logos/Picture6.png')
+					li 
+						img(src='assets/img/logos/Picture7.png')
+					li 
+						img(src='assets/img/logos/Picture3.png')
+					li 
+						img(src='assets/img/logos/Picture9.png')								
 		//- .newin-list
 		//- 	h2.list-header Produse noi
 		//- 	.product-list
 		//- 		+product-list(4)
-		.featured-list
-			h2.list-header Rechizite scolare
-			.product-list
-				+product-list(6)
+		//- .featured-list
+		//- 	h2.list-header Rechizite scolare
+		//- 	.product-list
+		//- 		+product-list(6)

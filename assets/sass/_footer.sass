@@ -1,0 +1,19 @@
+.footer
+	font-family: "Roboto Condensed", sans-serif
+	+clearfix
+	background-color: #000
+	font-size: 0.8em
+	padding: 1em 0
+	ul
+		display: inline-block
+		+h-nav
+		a 
+			color: #fff
+			margin-right: 0.5em
+	.footer-block
+		+make-sm-column(6)
+		&.rights
+			text-align: right
+	.title
+		@extend .list-header
+		border-bottom: 1px solid #aaa

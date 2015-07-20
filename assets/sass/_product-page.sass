@@ -1,12 +1,12 @@
 .product-page
 	+make-row()
 	.product-item
-		+make-sm-column(10)
+		+make-sm-column(12)
 		+clearfix
 		padding: 0
 		padding-top: $spacing
 	.product-image
-		+make-sm-column(7)		
+		+make-sm-column(5)		
 		.thumbnails
 			+make-sm-column(2)
 			+make-md-column(12)
@@ -45,27 +45,46 @@
 		+make-sm-column(5)		
 		p
 			margin-bottom: 0
-			font-size: 0.8em
+			font-size: 1em
 		.product-title
 			font-weight: 300
-			color: $blue
+			color: #000
 		.product-code
 			color: #ddd
 		.product-info-secondary
 			// padding: 0px 0px $spacing/2
-			border-bottom: 1px solid $blue
+			border-bottom: 1px solid #FAD2D2
 			margin-bottom: $spacing
 			.headline
 				font-size: 1em
 				margin-bottom: 0
 				display: none
 			p
-				margin-bottom: 0.5em 
+				margin-bottom: 0.5em
+				color: rgb(199, 124, 120) 
 			a
 				font-size: 0.8em
 				color: #000
 				text-decoration: underline
 				margin-bottom: 0.8em
+			ul 
+				margin-bottom: 0.5em
+				font-size: 0.8em
+				li	
+					&:before
+						font-family: "FontAwesome"
+						content: "\f005"
+						background-color: gray
+						border-radius: 100%
+						color: #fff
+						margin-right: 0.5em
+						font-size: 0.5em
+						width: 2em
+						height: 2em
+						display: inline-block
+						text-align: center
+						vertical-align: middle
+						line-height: 2em
 		.product-info-main
 			margin-bottom: $spacing		
 		.product-options
@@ -87,12 +106,12 @@
 			outline: none
 			+transition(all 0.2s ease-in)
 			&[data-pick="1"]			
-				background-color: $blue
-				border-color: scale-lightness($blue, -20)
-				font-weight: 600
+				background-color: $secondary
+				border-color: scale-lightness($secondary, -20)
+				font-weight: 400
 				color: #fff
 				option[disabled]	
-					color: scale-lightness($blue, -20)
+					color: scale-lightness($secondary, -20)
 				&:after			
 					font-family: "FontAwesome"
 					content: "\f00c"
@@ -100,7 +119,7 @@
 					position: absolute
 					font-size: 0.7em
 					margin-left: 0.3em
-					color: scale-lightness($blue, -20)
+					color: scale-lightness($secondary, -20)
 
 	.variant-container	
 		padding: 0.8em 0
@@ -180,14 +199,14 @@
 		font-size: 0.8em
 		padding: 0 1em
 		&:hover
-			background-color: $blue
-			border-color: scale-lightness($blue, -20)
+			background-color: $secondary
+			border-color: scale-lightness($secondary, -20)
 			color: #fff
 			position: relative
 			// font-weight: 600
 		&[data-pick="1"]
-			background-color: $blue
-			border-color: scale-lightness($blue, -20)
+			background-color: $secondary
+			border-color: scale-lightness($secondary, -20)
 			color: #fff
 			position: relative
 			// font-weight: 600
@@ -198,32 +217,72 @@
 				position: absolute
 				font-size: 0.7em
 				margin-left: 0.3em
-				color: scale-lightness($blue, -20)
+				color: scale-lightness($secondary, -20)
 				top: 0
 				right: 0.3em
 .add-to-basket
-	background-color: $red
+	background-color: $secondary
 	padding: 0 0.8em
 	line-height: 2em
 	outline: none
 	border: none
-	// border: 1px solid #b5c54a
 	color: #fff
-	+transition(all 0.2s ease-in)
+	padding-left: 0px
 	&:before		
-		+transition(all 0.2s ease-in)
-		content: "+"
-		font-weight: 300
 		margin-right: 0.5em
-		font-size: 1.4em
+		background-color: $primary
+		display: inline-block
 		float: left
+		background-image: url(../img/cart-white.svg)
+		background-repeat: no-repeat	
+		background-size: contain
+		background-position: center top
+		width: 20px
+		height: auto
+		content: ""		
+		border-right: 1px solid #fff
 		display: block
+		height: 32px
+		width: 40px	
+		background-color: #000
 	&:hover		
 		color: #fff
-		background-color: $blue
-		&:before
-			transform: scale(1.8)
-			// color: $red
+		background-color: $primary
+		// &:before
+		// 	transform: scale(1.8)	
+// .add-to-basket
+// 	opacity: 1
+// 	width: 70%
+// 	background-color: #6CA71D
+// 	color: #fff
+// 	text-align: center
+// 	line-height: 32px
+// 	position: absolute
+// 	bottom: 0
+// 	left: 15%
+// 	text-transform: uppercase
+// 	font-size: 0.7em
+// 	+transition(all 0.5s ease-in)	
+// 	background-size: 200% 100%
+// 	background-position: right bottom	
+// 	&:before		
+// 		margin-right: 0.5em
+// 		background-color: $primary
+// 		display: inline-block
+// 		float: left
+// 		background-image: url(../img/cart-white.svg)
+// 		background-repeat: no-repeat	
+// 		background-size: contain
+// 		background-position: center top
+// 		width: 20px
+// 		height: auto
+// 		content: ""
+// 		+transition(all 0.5s ease-in)
+// 		border-right: 1px solid #fff
+// 		display: block
+// 		height: 32px
+// 		width: 40px	
+// 		background-color: #000				
 .submit-order
 	p
 		display: inline-block
@@ -272,7 +331,7 @@
 	margin-top: $spacing*2
 	ul
 		+h-nav
-		border-bottom: 1px solid $blue
+		border-bottom: 1px solid $secondary
 		a
 			color: #000
 			font-size: 0.8em
@@ -285,12 +344,12 @@
 				margin-left: 5px
 				margin-right: 5px
 				font-weight: 400
-				color: $red
+				color: $secondary
 			&:hover
-				color: $blue
+				color: $secondary
 		li.active
 			a				
-				color: $blue	
+				color: $secondary	
 .tab-content
 	padding-top: $spacing	
 	+make-sm-column(12)
@@ -339,3 +398,7 @@
 		display: inline-block
 		img
 			float: left		
+.product-banners
+	+make-xs-column(12)
+	img 
+		max-width: 100%

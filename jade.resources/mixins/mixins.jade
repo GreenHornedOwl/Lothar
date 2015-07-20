@@ -27,11 +27,31 @@ mixin product-list(arg)
 			.item
 				.product-box
 					a(href='product.html')
-						img(src='http://placehold.it/370x370/FAFAFA/000000' class='product-item-image img-responsive')
+						div(style='position: relative;')
+							img(src='http://placehold.it/370x370/FAFAFA/000000' class='product-item-image img-responsive')
+							span.product-item-button= cta	
 						span.product-item-title #{product.name}
-						span.product-item-price #{product.promo} <sup> RON </sup>
-						span.product-item-old-price #{product.price} <sup> RON </sup>
-						span.product-item-button= cta
+						span.product-item-price 
+							span.product-item-old-price #{product.price} <sup> RON </sup>
+							| #{product.promo} <sup> RON </sup>
+						
+mixin product-list-carousel(arg)
+	-var i = 0
+	for product in products
+		if (i < arg)
+			-i=i+1
+			li
+				.item
+					.product-box
+						a(href='product.html')
+							div(style='position: relative;')
+								img(src='http://placehold.it/370x370/FAFAFA/000000' class='product-item-image img-responsive')
+								span.product-item-button= cta	
+							span.product-item-title #{product.name}
+							span.product-item-price 
+								span.product-item-old-price #{product.price} <sup> RON </sup>
+								| #{product.promo} <sup> RON </sup>
+													
 mixin filter-size()
 	for product in products
 		li

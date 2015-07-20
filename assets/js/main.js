@@ -4,10 +4,57 @@ function homeBoxes() {
 }
 
 $(document).ready(function() {
+		homeBoxes();
+		 var $window = $(window),
+      flexslider;
 
-	  $('.flexslider').flexslider({
+
+	  $('.home-slider .flexslider').flexslider({
 	    animation: "slide"
 	  });
+	 	$('.logos-list .flexslider').flexslider({
+	    animation: "slide",
+	    animationLoop: false,
+      itemWidth: 210,
+      itemMargin: 0,
+      maxItems: 8
+	  });
+
+
+   function getGridSize() {
+  return (window.innerWidth < 600) ? 2 :
+  			  (window.innerWidth < 1350) ? 6 :
+         (window.innerWidth < 1570) ? 6 : 8;
+  }
+
+  $window.load(function() {
+    $('.featured-list .flexslider').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 210,
+      itemMargin: 0,
+      minItems: getGridSize(), // use function to pull in initial value
+      maxItems: getGridSize() // use function to pull in initial value
+    });
+  });
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 	$('.summerwear a').on('click', function(e) {
@@ -136,6 +183,7 @@ $(document).ready(function() {
 			homeBoxes();
 			$(".wide").css("opacity","1");
 			$(".featured-list").css("opacity","1");
+			homeBoxes();
 		}
 	});
 
