@@ -2,13 +2,12 @@
 	+clearfix
 	// margin-bottom: 1em
 	position: relative
-	border-bottom: 2px solid #FAD2D2
 	font-size: 0.9em
 	position: fixed
 	left: 0
 	top: 0
 	right: 0
-	background-color: #fff
+	// background-color: #fff
 	z-index: 99
 	font-family: 'Roboto Condensed', sans-serif
 	@media (max-width: 1350px)
@@ -26,15 +25,16 @@
 	.cos
 		float: right
 		margin-left: 0.5em
-		line-height: 2em
-		padding-top: 0.5em
+		line-height: 3em
+		// padding-top: 0.5em
 		a 
 			max-width: 40px
 			position: relative
 			float: left
+			padding-top: 0.2em
 			span 
 				position: absolute
-				top: 4px
+				top: 7px
 				left: 9px
 				z-index: 10
 				background-color: rgba(255, 0, 0, 0.66)
@@ -85,3 +85,18 @@
 			font-size: 1.2em
 		.hidden-fix			
 			display: none		
+	.my-account
+		float: right
+		line-height: 3em
+		a 
+			color: #000
+			margin-right: 0.5em
+			.fa 
+				margin-right: 0.5em		
+.upper
+	+clearfix
+	border-bottom: 2px solid #FAD2D2
+	background-color: #fff
+.lower
+	+clearfix	
+	background-color: rgba(255,255,255,0.7)

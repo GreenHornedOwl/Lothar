@@ -1,119 +1,97 @@
-.header  
-  //- .upper
-  //-   .container
-  //-     ul
-  //-       li
-  //-         a(href='') Menu
-  //-       li
-  //-         a(href='') Menu
-  //-       li
-  //-         a(href='') Menu
-  //-     ul
-  //-       li
-  //-         p Telephone: 0722112233 | 0711334455
-  //-       li
-  //-         p
-  //-           | Monday-Sunday: 9
-  //-           sup 00
-  //-           | -12
-  //-           sup 00
+.header    
   .container
-    .logo
-      a(href='homepage.html')
-        img(src='assets/img/logo-aperta.svg' class='img-responsive')
-    //- .middle
-    //-   ul
-    //-     li
-    //-       a(href='') Menu
-    //-     li
-    //-       a(href='') Menu
-    //-     li
-    //-       a(href='') Menu
-    //-     li
-    //-       a(href='') Menu   
-    .main-nav
-      ul
-        li
-          a.active(href='category.html') Organizare, arhivare, prezentare           
-        //- li.dropdown
-        //-   a(href='category.html') Menu             
-        //-   ul.dropdown-menu.mega-menu
-        //-     .level-2-container
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3,4,5]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3                
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3,4,5]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-     .level-2-container
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-          each val in [1,2,3]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3,4,5,6,7]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-     .teaser
-        //-       img(src='http://placehold.it/148x310/FF00FF/ffffff')
-        //-     .level-2-container
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-          each val in [1,2,3]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3,4,5,6,7]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-     .level-2-container
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3,4,5,6,7]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        //-       li.level-2
-        //-         a(href='category.html') Menu Level 2
-        //-         ul
-        //-           each val in [1,2,3]
-        //-             li.level-3
-        //-               a(href='category.html') Menu Level 3
-        li
-          a(href='category.html') Scriere si corectare
-        li
-          a(href='category.html') Articole din hartie
-        li
-          a(href='category.html') Ambalare si etichetare
-        li
-          a(href='category.html') Articole scolare
-        li
-          a(href='category.html') Articole pentru birou
-        li
-          a(href='category.html') Produse pentru curatenie
-        li
-          a(href='category.html') Cadouri si promotionale  
-    .cos
-      a(href='cart.html')
-        img(src='assets/img/cart.svg')
-        span 5
-      span(style='line-height: 2.2em;' class="hidden-fix") produse
-    .search
-      form.form-group
-        input.form-control(type='search', placeholder='Cauta un produs...' class='hidden-fix')
-        button(type='button')
-          i.fa.fa-search
+    .upper
+      .logo
+        a(href='homepage.html')
+          img(src='assets/img/logo-aperta.svg' class='img-responsive')   
+      .main-nav
+        ul
+          li
+            a.active(href='category.html') Organizare, arhivare, prezentare           
+          //- li.dropdown
+          //-   a(href='category.html') Menu             
+          //-   ul.dropdown-menu.mega-menu
+          //-     .level-2-container
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3,4,5]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3                
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3,4,5]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-     .level-2-container
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-          each val in [1,2,3]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3,4,5,6,7]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-     .teaser
+          //-       img(src='http://placehold.it/148x310/FF00FF/ffffff')
+          //-     .level-2-container
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-          each val in [1,2,3]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3,4,5,6,7]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-     .level-2-container
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3,4,5,6,7]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          //-       li.level-2
+          //-         a(href='category.html') Menu Level 2
+          //-         ul
+          //-           each val in [1,2,3]
+          //-             li.level-3
+          //-               a(href='category.html') Menu Level 3
+          li
+            a(href='category.html') Scriere si corectare
+          li
+            a(href='category.html') Articole din hartie
+          li
+            a(href='category.html') Ambalare si etichetare
+          li
+            a(href='category.html') Articole scolare
+          li
+            a(href='category.html') Articole pentru birou
+          li
+            a(href='category.html') Produse pentru curatenie
+          li
+            a(href='category.html') Cadouri si promotionale      
+    .lower   
+      .search
+        form.form-group
+          input.form-control(type='search', placeholder='Cauta un produs...' class='hidden-fix')
+          button(type='button')
+            i.fa.fa-search      
+      .cos
+        a(href='cart.html')
+          img(src='assets/img/cart.svg')
+          span 5
+        //- span(style='line-height: 2.2em;' class="hidden-fix") produse    
+      .my-account
+        a(href='create-account.html') 
+          i(class='fa fa-user')
+          | Creaza cont 
   

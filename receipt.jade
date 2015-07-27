@@ -2,7 +2,7 @@ extend jade.resources/layout/master
 block content
 	.container.wrapper
 		.category-page		
-			h1.block-header.category-header.center-header Cosul tau	
+			h1.block-header.category-header.center-header Iti multumim pentru comanda ta	
 			.wrapper-fix
 				.cart-page
 					//- include jade.resources/partials/breadcrumbs.jade
@@ -32,17 +32,12 @@ block content
 										p 24 ore				
 								.cart-quantity
 									.media-right
-										input#QuantityOrderLineOL22592.quantity(name='quantity', value='1', type='number', stoc='4', size='30')								   						   
-										button.tooltip-test.btn-update(name='Update', type='button', title='update')
-											i.fa.fa-refresh				
+										p 6												
 								.cart-price
 									.media-right
 										p
 											| 199 Lei 
-											span (Include TVA)				 
-								.cart-delete
-									a.orderfunctions(href='#', title='delete')
-										i.fa.fa-times-circle						   
+											span (Include TVA)													   
 							.cart-row
 								.cart-product
 									.media-left
@@ -62,17 +57,12 @@ block content
 										p 24 ore				
 								.cart-quantity
 									.media-right
-										input#QuantityOrderLineOL22593.quantity(name='quantity', value='1', type='number', stoc='6', size='30')								   						   
-										button.tooltip-test.btn-update(name='Update', type='button', title='update')
-											i.fa.fa-refresh				
+										p 6												
 								.cart-price
 									.media-right
 										p
 											| 179 Lei 
-											span (Include TVA)				 
-								.cart-delete
-									a.orderfunctions(href='#', title='delete')
-										i.fa.fa-times-circle						   
+											span (Include TVA)													   
 							.cart-row
 								.cart-product
 									.media-left
@@ -92,17 +82,12 @@ block content
 										p 24 ore				
 								.cart-quantity
 									.media-right
-										input#QuantityOrderLineOL22595.quantity(name='quantity', value='1', type='number', stoc='2', size='30')								   						   
-										button.tooltip-test.btn-update(name='Update', type='button', title='update')
-											i.fa.fa-refresh				
+										p 6												
 								.cart-price
 									.media-right
 										p
 											| 609 Lei 
-											span (Include TVA)				 
-								.cart-delete
-									a.orderfunctions(href='#', title='delete')
-										i.fa.fa-times-circle						   
+											span (Include TVA)													   
 							.cart-row
 								.cart-product
 									.media-left
@@ -122,17 +107,13 @@ block content
 										p 24 ore				
 								.cart-quantity
 									.media-right
-										input#QuantityOrderLineOL22597.quantity(name='quantity', value='1', type='number', stoc='999', size='30')								   						   
-										button.tooltip-test.btn-update(name='Update', type='button', title='update')
-											i.fa.fa-refresh				
+										p 6)
+												
 								.cart-price
 									.media-right
 										p
 											| 279 Lei 
-											span (Include TVA)				 
-								.cart-delete
-									a.orderfunctions(href='#', title='delete')
-										i.fa.fa-times-circle		
+											span (Include TVA)									
 							.cart-summary
 								p
 									| Total (fara TVA) 
@@ -146,13 +127,11 @@ block content
 									| Total 
 									span.inclTVA (Include TVA)
 									span.subtotal 1266 Lei
-							footer.cart-footer
-								a.continue-shopping(href='category.html') Continua cumparaturile				
-								a.clear-cart(href='#') Goleste cosul				
-								a.go-checkout(href='checkout.html') Finalizeaza comanda
-			.featured-list
-				h2.list-header Produse recomandate
-				.product-list
-					.flexslider
-						ul.slides					
-							+product-list-carousel(8)
+							footer.cart-footer												
+								a.go-checkout(href='category.html') Continua cumparaturile
+			//- .featured-list
+			//- 	h2.list-header Produse recomandate
+			//- 	.product-list
+			//- 		.flexslider
+			//- 			ul.slides					
+			//- 				+product-list-carousel(8)

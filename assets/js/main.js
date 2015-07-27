@@ -38,7 +38,11 @@ $(document).ready(function() {
     });
   });
 
+  $(".add-address").on("click", function(e){
+  	e.preventDefault();
+  	$(".address-new").slideToggle();
 
+  });
 
 
 
