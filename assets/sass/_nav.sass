@@ -1,15 +1,15 @@
 .main-nav	
-	position: relative
+	// position: relative
 	z-index: 2	
 	font-family: "Roboto Condensed"
-	padding-left: 5.5em
+	padding-left: 4em
 	line-height: 3em
 	float: left
 	display: inline-block
 	margin-bottom: -1px
 	ul
 		+h-nav
-		position: relative
+		// position: relative
 	a		
 		font-weight: 400	
 		color: #000
@@ -58,12 +58,18 @@
 			border-color: #F17D0B
 			&:hover 
 				color: #F17D0B	
+		ul 
+			li 
+				line-height: 1.4
+				a 
+					border: none	
 	.dropdown		
 		a:after
 			font-family: "FontAwesome"
 			content: "\f107"
 			font-size: 0.8em
 			margin-left: 0.5em	
+			line-height: 1
 	.dropdown:hover
 		.dropdown-menu
 			display: inline-block		
@@ -71,30 +77,59 @@
 		display: none
 		+v-nav
 		+clearfix		
-		border-bottom: 2px solid $accent
+		border-bottom: 2px solid #FAD2D2
 		min-height: 300px
 		position: absolute
-		top: 28px
+		top: 100%
 		left: 0
-		.level-2			
+		right: 0
+		background-color: rgba(255,255,255,0.95)
+		border-top: 2px solid #FAD2D2
+		// box-shadow: 2px 2px 3px #aaa
+		padding: 0 4.4em
+		.level-2
 			a
-				+nav-level-2(transparent, $accent, transparent, $accent)
-				text-transform: uppercase
-				font-weight: 700
-				font-size: 0.9em
-				padding-left: 0.8em
-				&:after
-					display: none
-		.level-3
-			a
-				+nav-level-2(transparent, #000, transparent, $accent)
+				color: #000
+				// text-transform: uppercase
+				font-weight: 600				
+				padding-left: 0
+				border-bottom: 1px solid #e7e7e7
+				display: block
+				padding: 0
+				padding-bottom: 0.5em
+				margin-bottom: 0.5em
 				font-size: 0.8em
+				&:after
+					display: none				
+		.level-3
+			a					
 				text-transform: none
-				font-weight: 400			
-				padding-left: 1em
+				font-size: 1em
+				font-weight: 400
+				border: none
+				margin-bottom: 0.5em
 		.level-2-container
 			padding: 1em $grid-gutter-width/2
 			float: left		
+			+make-sm-column(1,8)
 	.teaser
 		float: left
+.magazin
+	float: right
+	padding-left: 0px
+	li
+		border: none
+		a 
+			border: none
+			// color: #fff
+			&:hover
+				color: $secondary
+			&.cos 
+				border-color: #fff
+				border: none
+	.dropdown 
+		li 
+			ul 
+				padding-top: 0.5em
+				li 
 								
